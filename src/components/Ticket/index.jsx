@@ -4,7 +4,7 @@ import css from './styles.css';
 import { renderPrice, getCarrierLogo, parseDate } from '../../utils';
 
 const Ticket = (props) => {
-  const { data } = props;
+  const { data, currency } = props;
   return (
     <div className={css.ticket}>
       <div className={css.left_column}>
@@ -18,7 +18,7 @@ const Ticket = (props) => {
             Купить
           </span>
           <span className={css.buy_text}>
-            {`за ${renderPrice(data.price)}`}
+            {`за ${renderPrice(data.price, currency)}`}
           </span>
         </button>
       </div>

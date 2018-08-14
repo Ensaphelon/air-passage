@@ -1,3 +1,4 @@
+import { uniqueId } from 'lodash';
 import turkishAirline from '../images/ta@2x.png';
 
 const days = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
@@ -16,11 +17,13 @@ const months = [
   'дек',
 ];
 
-export const renderPrice = (price, currency = '₽') => {
-  const spacedPrice = price.toString().split('').reverse().map((numb, index) => ((index % 3 === 0 && index > 0) ? `${numb} ` : numb))
+export const renderPrice = (price, currency) => {
+  const { symbol, rate } = currency;
+  const newPrice = Math.round(price * rate);
+  const spacedPrice = newPrice.toString().split('').reverse().map((numb, index) => ((index % 3 === 0 && index > 0) ? `${numb} ` : numb))
     .reverse()
     .join('');
-  return `${spacedPrice} ${currency}`;
+  return `${spacedPrice} ${symbol}`;
 };
 
 export const getCarrierLogo = (carrier) => {
@@ -40,3 +43,8 @@ export const parseDate = (dateStr) => {
   const year = date.getFullYear();
   return `${dayNumber} ${month} ${year}, ${day}`;
 };
+
+export const createObjectWithUniqueKeys = arr => arr.reduce((acc, current) => {
+  const id = uniqueId();
+  return { ...acc, [id]: { ...current, id } };
+}, {});

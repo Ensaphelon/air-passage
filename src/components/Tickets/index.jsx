@@ -4,13 +4,13 @@ import Ticket from '../Ticket';
 import styles from './styles.css';
 
 const Tickets = (props) => {
-  const { tickets } = props;
+  const { tickets, currency } = props;
   return (
     <div className="tickets">
       <ul className={styles.tickets__list}>
-        {tickets.sort(ticket => ticket.price).map((ticket, index) => (
+        {tickets.map((ticket, index) => (
           <li key={index} className="tickets__item">
-            <Ticket data={ticket} />
+            <Ticket currency={currency} data={ticket} />
           </li>
         ))}
       </ul>
