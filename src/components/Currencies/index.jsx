@@ -16,7 +16,9 @@ const Currencies = (props) => {
           });
           return (
             <li className={css.item} key={currency.id}>
-              <button onClick={e => changeCurrency(e, currency.id)} className={className} type="button">{currency.name}</button>
+              <button onClick={e => changeCurrency(e, currency.id)} className={className} type="button">
+                {currency.name}
+              </button>
             </li>
           );
         })}

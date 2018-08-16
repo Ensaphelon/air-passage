@@ -1,7 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import css from './styles.css';
-import { renderPrice, getCarrierLogo, parseDate } from '../../utils';
+import {
+  renderPrice,
+  getCarrierLogo,
+  parseDate,
+  convertNumeratorString,
+} from '../../utils';
 
 const Ticket = (props) => {
   const { data, currency } = props;
@@ -29,7 +34,7 @@ const Ticket = (props) => {
           </div>
           <div className={css.change_container}>
             <div className={css.change_text}>
-              {`${data.stops} пересадка`}
+              {convertNumeratorString('stops', data.stops)}
             </div>
           </div>
           <div className={css.time}>

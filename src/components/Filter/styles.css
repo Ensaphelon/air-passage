@@ -1,0 +1,74 @@
+.filter{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item{
+  position: relative;
+}
+
+.label{
+  padding: 8px 10px 8px 15px;
+  display: flex;
+  cursor: pointer;
+}
+
+.item:hover{
+  background-color: #f1fcff;
+}
+
+.input{
+  display: none;
+}
+
+.text{
+  color: #4a4a4a;
+  font-size: 13px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.icon{
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: 1px solid #d2d5d6;
+  background-color: #ffffff;
+  margin-right: 10px;
+}
+
+
+.checked{
+  background-color: #f2fcff;
+  border-color: #2196f3;
+  background-image: url('../../images/check-icon.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.button{
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: none;
+  border: 0;
+  font-size: 11px;
+  color: #2196f3;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+}
+
+.button:hover{
+  text-decoration: underline;
+}
+
+.item:hover .button{
+  display: inline-block;
+}
