@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import css from './styles.css';
 import {
   renderPrice,
@@ -62,10 +61,6 @@ const Ticket = (props) => {
       </div>
     </div>
   );
-};
-
-Ticket.propTypes = {
-  data: PropTypes.instanceOf(Object).isRequired,
 };
 
 export default Ticket;

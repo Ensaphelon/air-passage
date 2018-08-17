@@ -20,14 +20,27 @@ const Filter = (props) => {
         });
         return (
           <li className={css.item} key={id}>
-            <label className={css.label} onClick={e => toggleFilter(e, id)} htmlFor={id}>
-              <input className={css.input} id={id} type="checkbox" checked={active} />
+            <label
+              className={css.label}
+              onClick={e => toggleFilter(e, id)}
+              htmlFor={id}
+            >
+              <input
+                className={css.input}
+                id={id}
+                type="checkbox"
+                checked={active}
+              />
               <i className={iconClass} />
               <span className={css.text}>
                 {convertNumeratorString(key, match)}
               </span>
             </label>
-            <button className={css.button} onClick={e => toggleFilter(e, id, true)} type="button">
+            <button
+              className={css.button}
+              onClick={e => toggleFilter(e, id, true)}
+              type="button"
+            >
               Только
             </button>
           </li>

@@ -7,9 +7,9 @@ import Tickets from '../Tickets';
 import Sidebar from '../Sidebar';
 import Currencies from '../Currencies';
 import { createObjectWithUniqueKeys, createFilters } from '../../utils';
-import styles from './styles.css';
 import { tickets } from '../../tickets.json';
 import criteriers from '../../criteriers';
+import css from './styles.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -59,7 +59,7 @@ class App extends React.Component {
       right,
       left,
       leftInner,
-    } = styles;
+    } = css;
     const { currencies, filters } = this.state;
     const { changeCurrency, toggleFilter } = this;
     return (

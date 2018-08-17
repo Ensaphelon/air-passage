@@ -19,3 +19,14 @@
   width: 70%;
   max-width: 570px;
 }
+
+@media screen and (max-width: 820px) {
+  .columns, .right, .left{
+    width: 100%;
+    display: block;
+    max-width: none;
+  }
+  .right, .left{
+    margin: 20px auto;
+  }
+}

@@ -16,7 +16,11 @@ const Currencies = (props) => {
           });
           return (
             <li className={css.item} key={currency.id}>
-              <button onClick={e => changeCurrency(e, currency.id)} className={className} type="button">
+              <button
+                onClick={e => changeCurrency(e, currency.id)}
+                className={className}
+                type="button"
+              >
                 {currency.name}
               </button>
             </li>
@@ -26,9 +30,5 @@ const Currencies = (props) => {
     </div>
   );
 };
-
-// Tickets.propTypes = {
-//   tickets: PropTypes.instanceOf(Array).isRequired,
-// };
 
 export default Currencies;

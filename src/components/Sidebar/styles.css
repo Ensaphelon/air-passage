@@ -10,3 +10,9 @@
 .sidebar{
   padding-bottom: 15px;
 }
+
+@media screen and (max-width: 820px) {
+  .sidebar{
+    text-align: center;
+  }
+}

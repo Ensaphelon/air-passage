@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Ticket from '../Ticket';
 import { applyFilters } from '../../utils';
 import styles from './styles.css';
@@ -20,10 +19,6 @@ const Tickets = (props) => {
       </ul>
     </div>
   );
-};
-
-Tickets.propTypes = {
-  tickets: PropTypes.instanceOf(Array).isRequired,
 };
 
 export default Tickets;
